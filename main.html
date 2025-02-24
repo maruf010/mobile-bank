@@ -1,24 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
 </head>
+
 <body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto bg-gray-200 py-6">
+    <section class="max-w-md min-h-screen mx-auto bg-gray-100 py-6">
         <header>
             <nav class="flex justify-around items-center">
                 <img src="./assets/Group.png" alt="">
                 <div class="text-center">
-                    <h3 class="text-2xl font-bold">$45000</h3>
+                    <h3 class="text-2xl font-bold">$ <span id="main-balance">45000</span></h3>
                     <p class="text-gray-500 border-2 border-gray-400 px-2 rounded-md mt-2">Available Balance</p>
                 </div>
                 <button class="bg-white px-3 py-1 border border-gray-300 rounded-md">Log Out</button>
             </nav>
+
+            <section class="mt-10 mx-2">
+                <div class="mx-3">
+                    <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
+                    <p class="text-gray-400">Enjoy easy and convenient financial services with us. Cashout charge is low
+                    and </p>
+                </div>
+                <div class="card-container grid grid-cols-3 mt-12 gap-2">
+                    <div class="cards border border-gray-300 p-4 rounded-md cursor-pointer">
+                        <img class="mx-auto w-8" src="./assets/wallet 1.png" alt="">
+                        <h3 class="text-center">Add Money</h3>
+                    </div>
+                    <div class="cards border border-gray-300 p-4 rounded-md cursor-pointer">
+                        <img class="mx-auto w-8" src="./assets/send 1.png" alt="">
+                        <h3 class="text-center">Cashout</h3>
+                    </div>
+                    <div class="cards border border-gray-300 py-4 rounded-md cursor-pointer">
+                        <img class="mx-auto w-8" src="./assets/money 1.png" alt="">
+                        <h3 class="text-center">Transfer Money</h3>
+                    </div>
+                    <div class="cards border border-gray-300 py-4 rounded-md cursor-pointer">
+                        <img class="mx-auto w-8" src="./assets/financial 1.png" alt="">
+                        <h3 class="text-center">Get Bonus</h3>
+                    </div>
+                    <div class="cards border border-gray-300 py-4 rounded-md cursor-pointer">
+                        <img class="mx-auto w-8" src="./assets/purse 1.png" alt="">
+                        <h3 class="text-center">Pay Bill</h3>
+                    </div>
+                    <div class="cards border border-gray-300 py-4 rounded-md cursor-pointer hover:bg-green-200">
+                        <img class="mx-auto w-8" src="./assets/transaction 1.png" alt="">
+                        <h3 class="text-center">Transactions</h3>
+                    </div>
+                </div>
+                <!-- add money -->
+                <section class="mt-5">
+                    <h1 class="text-lg font-bold ml-3">Add Money</h1>
+                    <div class="">
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+                          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <legend>Select Bank</legend>
+                                <select class="select select-bordered w-full max-w-xs">
+                                    <option disabled selected>Select A Bank</option>
+                                    <option value="BKash">BKash</option>
+                                    <option value="Nagod">Nagod</option>
+                                    <option value="Rocket">Rocket</option>
+                                  </select>
+                              <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text">Bank Account Number</span>
+                                </label>
+                                <input value="01700100000" id="account-number" type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+                              </div>
+                              <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text">Amount to Add</span>
+                                </label>
+                                <input id="add-amount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                              </div>
+                              <div class="form-control">
+                                <label class="label">
+                                  <span class="label-text">Pin Number</span>
+                                </label>
+                                <input value="1234" id="pinNumber" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+                              </div>
+                              <div class="form-control mt-6">
+                                <button id="add-money" class="btn btn-primary font-bold">Add Money</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                </section>
+            </section>
+
         </header>
     </section>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
