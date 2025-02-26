@@ -1,8 +1,8 @@
 document.getElementById('add-money').addEventListener('click', function (event) {
     event.preventDefault();
+    const accountNumber = document.getElementById('account-number').value;
     const amount = getValueById('add-amount');
     const pin = getValueById('pinNumber');
-    const accountNumber = document.getElementById('account-number').value;
     const mainBalance = getInnerTextById('main-balance');
 
     const selectBank = document.getElementById('select-bank').value;
