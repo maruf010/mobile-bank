@@ -6,7 +6,7 @@ document.getElementById('add-money').addEventListener('click', function (event) 
     const mainBalance = getInnerTextById('main-balance');
 
     const selectBank = document.getElementById('select-bank').value;
-    console.log(selectBank)
+    // console.log(selectBank)
 
     if (amount < 0){
         alert('Enter a Positive Amount')
@@ -21,12 +21,13 @@ document.getElementById('add-money').addEventListener('click', function (event) 
 
                 const container = document.getElementById('transaction-container');
                 const div = document.createElement('div');
-                div.classList.add('bg-red-400')
+                div.classList.add('bg-green-400','mt-2','rounded-lg')
 
                 div.innerHTML = `
-                <h1 class="text-yellow-400">Added Money from ${selectBank}</h1>
-                <h3>${amount}</h3>
-                <p>${accountNumber}</p>
+                <h1 class="text-white text-lg ml-4 pt-2">Received Money from ${selectBank}</h1>
+                <h3 class="text-white ml-4">Amount: ${amount} $</h3>
+                <p class="text-white ml-4">Sender: ${accountNumber}</p>
+                <p class="text-white ml-4 pb-2">Total Balance: ${sum} $</p>
                 `
                 container.appendChild(div);
 
