@@ -49,7 +49,7 @@
                         <img class="mx-auto w-8" src="./assets/purse 1.png" alt="">
                         <h3 class="text-center">Pay Bill</h3>
                     </div>
-                    <div class="cards border border-gray-300 py-4 rounded-md cursor-pointer hover:bg-green-200">
+                    <div id="transaction-card" class="cards border border-gray-300 py-4 rounded-md cursor-pointer hover:bg-green-200">
                         <img class="mx-auto w-8" src="./assets/transaction 1.png" alt="">
                         <h3 class="text-center">Transactions</h3>
                     </div>
@@ -127,13 +127,22 @@
                         </div>
                       </div>
                 </section>
-            </section>
+                <!-- transaction -->
+                <section id="transaction-history">
+                  <h1 class="text-lg font-bold ml-3">Transactions History</h1>
+                  <div id="transaction-container"></div>
+                </section>
 
+            </section>
         </header>
     </section>
-
-    <script src="./js/main.js"></script>
-    <script src="./js/toggle.js"></script>
-    <script src="./js/cashout.js"></script>
+    <script src="./update js/transaction.js"></script>
+    <script src="./update js/cashout2.js"></script>
+    <script src="./update js/toggle2.js"></script>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./update js/addMoneyMain2.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <!-- <script src="./js/toggle.js"></script> -->
+    <!-- <script src="./js/cashout.js"></script> -->
 </body>
 </html>

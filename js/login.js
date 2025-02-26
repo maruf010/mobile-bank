@@ -9,10 +9,10 @@ document.getElementById('btn-login').addEventListener('click',function(event){
             window.location.href= "./main.html"
         }
         else{
-            console.log('wrong Pin')
+            alert('wrong Pin')
         }
     }
     else{
-        console.log('Incorrect Number')
+        alert('Incorrect Number')
     }
 })
