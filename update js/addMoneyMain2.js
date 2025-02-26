@@ -5,6 +5,9 @@ document.getElementById('add-money').addEventListener('click', function (event) 
     const accountNumber = document.getElementById('account-number').value;
     const mainBalance = getInnerTextById('main-balance');
 
+    const selectBank = document.getElementById('select-bank').value;
+    console.log(selectBank)
+
     if (amount < 0){
         alert('Enter a Positive Amount')
         return;
@@ -17,11 +20,15 @@ document.getElementById('add-money').addEventListener('click', function (event) 
                 setInnerTextByIdValue('main-balance', sum);
 
                 const container = document.getElementById('transaction-container');
-                const p = document.createElement('p');
-                p.innerText = `
-            Added ${amount}$ from ${accountNumber} Account
-            `
-                container.appendChild(p);
+                const div = document.createElement('div');
+                div.classList.add('bg-red-400')
+
+                div.innerHTML = `
+                <h1 class="text-yellow-400">Added Money from ${selectBank}</h1>
+                <h3>${amount}</h3>
+                <p>${accountNumber}</p>
+                `
+                container.appendChild(div);
 
             }
             else {
